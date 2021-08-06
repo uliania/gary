@@ -6,17 +6,36 @@ def main():
 
     #print(string)
 
+    acceptableChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 
 
     username = input("enter a user:\n")
+
     age = int(input("enter your age:\n"))
 
     #print("Hi!!!  My favorite number is " + integer)
 
-    print(username + " is " + str(age) + " years old")
+
 
     number = "11"
     number = int(number)
+
+
+
+
+    acceptedUser = ""
+
+    for i in username:
+        for j in acceptableChars:
+             if i == j:
+                acceptedUser += i
+
+    if acceptedUser == username:
+        print(username + " is " + str(age) + " years old")
+    else:
+        print("Invalid Username")
+
 
 
 
